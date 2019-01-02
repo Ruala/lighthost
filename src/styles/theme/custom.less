@@ -1,13 +1,9 @@
 html {
+  min-width: 320px;
   font-family: @tm-font-family;
   font-size: @tm-font-size;
   line-height: @tm-line-height;
   color: @tm-text-color;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
 }
 
 b, strong,
@@ -231,7 +227,6 @@ b, strong,
   font-weight: 500;
   text-align: left;
   border-radius: 15px;
-  box-shadow: 0 16px 64px rgba(@tm-primary-background, 0.55);
 }
 
 .tm-button-social {
@@ -269,6 +264,10 @@ b, strong,
   margin-right: 75px;
 }
 
+.tm-section-1 {
+  background: linear-gradient(to right, #fff, @tm-secondary-background);
+}
+
 .tm-top-info {
   position: relative;
   z-index: 1;
@@ -281,24 +280,16 @@ b, strong,
   color: #000;
   background-color: @tm-secondary-background;
 
-  &::before, &::after {
+  &::before {
     content: '';
     display: block;
     position: absolute;
     top: 0;
     bottom: 0;
-    background-color: @tm-secondary-background;
-  }
-
-  &::before {
-    width: 340px;
     right: 100%;
+    width: 340px;
+    background-color: @tm-secondary-background;
     border-radius: 15px 0 0 15px;
-  }
-
-  &::after {
-    width: 3000px;
-    left: 100%;
   }
 }
 
@@ -401,6 +392,7 @@ b, strong,
   }
 
   .tm-button-order {
+    width: 340px;
     font-size: 20px;
     line-height: 26px;
   }
